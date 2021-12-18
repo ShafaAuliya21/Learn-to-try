@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	
+cout << "Program Menghitung Gaji Bersih Karyawan" << endl;
+
+string Nama_Karyawan;
+int Gaji_Pokok;
+int Tunjangan;
+int Pajak;
+int Gaji_Bersih;
+
+//input
+cout << "Nama Karyawan : ";
+getline (cin,Nama_Karyawan);
+cout << "Gaji Pokok : ";
+cin >> Gaji_Pokok;
+
+Tunjangan = 0.2*Gaji_Pokok;
+Pajak = (Gaji_Pokok + Tunjangan) * 0.15;
+Gaji_Bersih = Gaji_Pokok + Tunjangan - Pajak;
+
+//output
+cout << "Nama Karyawan : " << Nama_Karyawan << endl;
+cout << "Gaji Bersih Karyawan : " << Gaji_Bersih << endl;
+
+return 0;
+}
